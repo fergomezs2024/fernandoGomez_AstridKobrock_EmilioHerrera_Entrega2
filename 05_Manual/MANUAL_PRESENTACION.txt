@@ -535,7 +535,7 @@ Que hacer durante la demo (5 min aprox):
   1. Tener la terminal abierta en la carpeta del proyecto
      (todo ya instalado y probado de antes)
 
-  2. Escribir: python analisis.py
+  2. Escribir: python 02_Ingesta_y_Pipeline/analisis.py
      Mostrar como corre etapa por etapa en la terminal.
      Ir explicando lo que aparece: "aca esta leyendo los datos",
      "aca elimino 7 filas", "aca esta entrenando el modelo", etc.
