@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($word = New-Object -ComObject Word.Application; $word.Visible = $false; $doc = $word.Documents.Open\\(\"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\11_Casos_Eleccion_Parciales_2-3_EFT.docx\"\\); $doc.Content.Text; $doc.Close\\(\\); $word.Quit\\(\\))",
+      "PowerShell(Get-Content *)",
+      "Bash(powershell *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(pip install *)",
+      "PowerShell(Get-Item *)",
+      "PowerShell(python -c \"import fitz; doc = fitz.open\\(r'C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\EV PARCIAL 2_ITY1101_ESTUDIANTE.pdf'\\); [print\\(page.get_text\\(\\)\\) for page in doc]\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Head -100)",
+      "PowerShell(Start-Process \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\dashboard.html\")",
+      "PowerShell(Add-Type -AssemblyName 'System.IO.Compression.FileSystem'; $zip = [System.IO.Compression.ZipFile]::OpenRead\\('C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\11_Casos_Eleccion_Parciales_2-3_EFT.docx'\\); $entry = $zip.Entries | Where-Object { $_.FullName -eq 'word/document.xml' }; $stream = $entry.Open\\(\\); $reader = New-Object System.IO.StreamReader\\($stream\\); $content = $reader.ReadToEnd\\(\\); $reader.Close\\(\\); $stream.Close\\(\\); $zip.Dispose\\(\\); $text = [System.Text.RegularExpressions.Regex]::Replace\\($content, '<[^>]+>', ' '\\); $text = [System.Text.RegularExpressions.Regex]::Replace\\($text, '\\\\s+', ' '\\); $text.Trim\\(\\))",
+      "PowerShell(Add-Type -AssemblyName 'System.IO.Compression.FileSystem'; $zip = [System.IO.Compression.ZipFile]::OpenRead\\('C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\EV PARCIAL 2_ITY1101_ESTUDIANTE.pdf'\\); $zip.Entries | ForEach-Object { $_.FullName })",
+      "PowerShell(python -c \"import fitz; print\\('ok'\\)\")",
+      "PowerShell(python C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\analisis.py)",
+      "PowerShell(python C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\analisis.py 2>&1 | Out-String)",
+      "PowerShell(python -c \"print\\('test'\\)\")",
+      "Bash(python *)",
+      "Bash(echo \"EXIT: $?\")",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(Get-ChildItem \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\\", \"\"\\) })",
+      "PowerShell(python \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\02_Ingesta_y_Pipeline\\\\analisis.py\" 2>&1 | Select-Object -Last 15)",
+      "PowerShell(python --version)"
+    ]
+  }
+}
