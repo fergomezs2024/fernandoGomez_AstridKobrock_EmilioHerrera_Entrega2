@@ -24,7 +24,13 @@
       "PowerShell(Remove-Item *)",
       "PowerShell(Get-ChildItem \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\" -Recurse | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\\", \"\"\\) })",
       "PowerShell(python \"C:\\\\PROJECTOSCLAU\\\\GestionDeDatos\\\\02_Ingesta_y_Pipeline\\\\analisis.py\" 2>&1 | Select-Object -Last 15)",
-      "PowerShell(python --version)"
+      "PowerShell(python --version)",
+      "PowerShell(git add *)",
+      "PowerShell(git push *)"
     ]
+  }
+  "attribution":{
+	  "commit":"",
+	  "pr":""
   }
 }
